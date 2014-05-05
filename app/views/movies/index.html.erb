@@ -2,6 +2,7 @@
   <h1>Movies</h1>
 </div>
 
+
 <% @list_of_movies.each do |movie| %>
   <div class="row">
     <div class="col-sm-12">
@@ -19,7 +20,8 @@
               <dd><%= movie.year %></dd>
 
               <dt>Director</dt>
-              <dd><%= movie.director_id %></dd>
+              <dd><%= Director.find(movie.director_id).name %></dd>
+              
 
               <dt>Description</dt>
               <dd><%= movie.description %></dd>
